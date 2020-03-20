@@ -90,20 +90,22 @@ func TestTimeoutContext(t *testing.T) {
 	defer ts.Close()
 
 	var err error
-	var start = time.Now()
 	var c = make(chan int)
+	var begin = time.Now()
+	var d time.Duration
 	go func() {
 		ctx := context.TODO()
 		ctx, cancel := context.WithTimeout(ctx, 100*time.Millisecond)
 		defer cancel()
 		_, err = Get(ctx, ts.URL).Do()
+		d = time.Now().Sub(begin)
 		c <- 1
 	}()
 	<-c
 	if !os.IsTimeout(err) {
 		t.Errorf("fail err,got: %v", err)
 	}
-	if time.Now().Sub(start) > 200*time.Millisecond {
+	if d > 300*time.Millisecond {
 		t.Error("request timeout")
 	}
 }
