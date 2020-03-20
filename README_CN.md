@@ -47,7 +47,7 @@ t.Logf("resp: %s", string(body))
 ```golang
 ctx := context.TODO()
 var ret = make(map[string]interface{})
-err := httprpc.JSON(ctx, "https://webgfw2.ymt.com/pub/v10/appim/default/websocket_reg.json?app_key=4001&fCode=1000002", nil).IntoJSON(&ret)
+err := httprpc.JSON(ctx, "https://enrprehryqtc.x.pipedream.net", nil).IntoJSON(&ret)
 if err != nil {
     t.Error(err)
 }
