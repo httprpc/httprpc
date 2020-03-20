@@ -1,10 +1,14 @@
 
 # httprpc
 
-[![codecov.io][3]][4] [![Go Report][5]][6]  [![codebeat][7]][8] 
+[![codecov.io][1]][2] [![codecov.io][3]][4] [![Go Report][5]][6]  [![codebeat][7]][8] 
+
+[1]: https://github.com/httprpc/httprpc/workflows/Test/badge.svg?branch=master "github action Test badge"
+[2]: https://github.com/httprpc/httprpc/actions?query=workflow%3ATest "github action Test"
 
 [3]: https://codecov.io/github/httprpc/httprpc/coverage.svg?branch=master "Coverage badge"
 [4]: https://codecov.io/github/httprpc/httprpc?branch=master "Codecov Status"
+
 [5]: https://goreportcard.com/badge/github.com/httprpc/httprpc "Go Report badge"
 [6]: https://goreportcard.com/report/github.com/httprpc/httprpc "Go Report"
 
